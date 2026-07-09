@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release Log — Syntetika Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Syntetika</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="log.html" class="active">Release Log</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Release Log</h1>
+            <p>Updates, fixes, problem solving & development notes</p>
+        </div>
+    </section>
+
+    <section class="log">
+        <div class="container">
+            <div class="log-list">
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">v1.1.1</span>
+                        <span class="log-project">Syntetika Studio</span>
+                        <time class="log-date">09 JUL 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>HRTF Overload Hotfix & Project Cleanup</h3>
+                        <div class="log-section">
+                            <h4>Problems Fixed</h4>
+                            <ul>
+                                <li>Threading safety issue di <code>SpatialRender</code> — race condition saat multiple nodes mengakses HRTF processor secara bersamaan</li>
+                                <li>Memory leak di <code>Push2Control</code> — object tidak di-release saat disconnect</li>
+                                <li>Buffer overflow di <code>SpatialRender</code> dan <code>GIFAnimator</code> — out-of-bounds write saat buffer size berubah runtime</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Changes</h4>
+                            <ul>
+                                <li>Refactor sistem spatial audio — menghapus legacy HRTF path yang tidak terpakai</li>
+                                <li>Perbaikan sistem save/load — state preservation antar sesi</li>
+                                <li>UI improvements dan cleanup orphan files</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">v1.1.0</span>
+                        <span class="log-project">Syntetika Engine</span>
+                        <time class="log-date">15 JUN 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>Audio Lag Fix & Performance Optimization</h3>
+                        <div class="log-section">
+                            <h4>Problems Fixed</h4>
+                            <ul>
+                                <li>Audio lag saat playback lebih dari 2 menit — buffer scheduling tidak sinkron dengan <code>AudioContext.currentTime</code></li>
+                                <li>MIDI latency tidak konsisten — timing issue di Web MIDI API handler</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Changes</h4>
+                            <ul>
+                                <li>Optimasi Web Audio API rendering pipeline — mengurangi callback overhead</li>
+                                <li>Enhanced AI composition engine — rule-based pattern generation lebih responsif</li>
+                                <li>Stabil untuk live performance dengan hardware MIDI controllers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">init</span>
+                        <span class="log-project">HLTN Advanced Output</span>
+                        <time class="log-date">01 JUN 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>Initial Development — Core Systems</h3>
+                        <div class="log-section">
+                            <h4>Implemented</h4>
+                            <ul>
+                                <li>Multi-display output system — multiple output display dalam satu project</li>
+                                <li>Warp mesh dengan interactive vertex editing untuk perspective mapping</li>
+                                <li>Edge blending — seamless multi-projector setup</li>
+                                <li>Auto-layout grid system untuk slice management</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Stack</h4>
+                            <p>C++ / CMake / OBS Plugin SDK — target Windows</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="footer-logo">Syntetika</span>
+                <p>Project by Danartri — Experimental tools & multimedia experiences.</p>
+                <a href="Lampiran/Danar%20Syntetika%20Profile.pdf" target="_blank" rel="noopener" class="footer-cv">
+                    <i class="fas fa-file-pdf"></i> Download Profile (PDF)
+                </a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/synt.etika" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Syntetika Project. Built with <i class="fas fa-heart"></i> and curiosity.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

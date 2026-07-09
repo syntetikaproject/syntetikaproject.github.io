@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Syntetika Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Syntetika</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="log.html">Release Log</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Projects</h1>
+            <p>Experimental tools currently in development</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="project-featured">
+                <div class="project-featured-content">
+                    <span class="project-badge">CORE</span>
+                    <h3>Syntetika Studio</h3>
+                    <p class="project-desc">
+                        <strong>Open Experience Composition Platform</strong> — compose sound, shape space,
+                        create experience. Fork of Bespoke Synth. Node-based architecture unifying audio, MIDI,
+                        Python scripting, and real-time performance in one modular environment.
+                    </p>
+                    <div class="project-tags">
+                        <span>C++</span><span>JUCE</span><span>Python</span><span>VST2</span><span>Ableton Link</span><span>GPL-3.0</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/danartriyudistira/Syntetika-Studio/releases" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-download"></i> Download (v1.1.1)</a>
+                        <a href="https://github.com/danartriyudistira/Syntetika-Studio" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> Source</a>
+                        <a href="log.html" class="btn btn-outline"><i class="fas fa-clipboard-list"></i> Release Log</a>
+                    </div>
+                </div>
+                <div class="project-featured-visual">
+                    <div class="visual-placeholder">
+                        <i class="fas fa-wave-square"></i>
+                        <span>Syntetika Studio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge small">ENGINE</span>
+                        <h3>Syntetika Engine</h3>
+                        <p>Browser-based DAW with AI-assisted composition, WebGL visualizer, and hardware MIDI support. 4-track sequencer, 35+ genre drums, 100+ scales — no framework, no build step.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span><span>WebAudio</span><span>WebGL2</span><span>Web MIDI</span><span>AI</span><span>OSC</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/danartriyudistira/syntetika_engine/releases" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> v1.1.0</a>
+                            <a href="https://github.com/danartriyudistira/syntetika_engine" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge small">PLUGIN</span>
+                        <h3>HLTN Advanced Output</h3>
+                        <p>OBS Studio plugin for multi-display output with interactive warp mesh, edge blending, and auto-layout grid. Real-time projection mapping directly from OBS.</p>
+                        <div class="project-tags">
+                            <span>C++</span><span>OBS Plugin</span><span>Warp Mesh</span><span>Edge Blend</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/danartriyudistira/Hltn-advance-mapping" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fab fa-github"></i> Source</a>
+                            <a href="https://github.com/danartriyudistira/Hltn-advance-mapping#readme" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-book"></i> Docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="footer-logo">Syntetika</span>
+                <p>Project by Danartri — Experimental tools & multimedia experiences.</p>
+                <a href="Lampiran/Danar%20Syntetika%20Profile.pdf" target="_blank" rel="noopener" class="footer-cv">
+                    <i class="fas fa-file-pdf"></i> Download Profile (PDF)
+                </a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/synt.etika" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Syntetika Project. Built with <i class="fas fa-heart"></i> and curiosity.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

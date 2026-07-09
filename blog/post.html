@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post — Syntetika Project</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">Syntetika</a>
+            <ul class="nav-menu">
+                <li><a href="../">Home</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="index.html">Blog</a></li>
+                <li><a href="../log.html">Release Log</a></li>
+                <li><a href="../#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="blog-post-section">
+        <div class="container">
+            <div id="post-content">
+                <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="footer-logo">Syntetika</span>
+                <p>Project by Danartri — Experimental tools & multimedia experiences.</p>
+                <a href="../Lampiran/Danar%20Syntetika%20Profile.pdf" target="_blank" rel="noopener" class="footer-cv">
+                    <i class="fas fa-file-pdf"></i> Download Profile (PDF)
+                </a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/synt.etika" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Syntetika Project. Built with <i class="fas fa-heart"></i> and curiosity.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="../js/blog.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+    (async () => {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const el = document.getElementById('post-content');
+
+        if (!id) {
+            el.innerHTML = '<div class="error">Post tidak ditemukan.</div>';
+            return;
+        }
+
+        try {
+            const post = await fetchPost(id);
+            document.title = post.title + ' — Syntetika Project';
+            el.innerHTML = `
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Semua post</a>
+                <article class="blog-post">
+                    <header class="blog-post-header">
+                        <div class="blog-post-meta">
+                            ${post.labels.map(l => `<span class="blog-label" style="background:#${l.color}20;color:#${l.color};border-color:#${l.color}40">${l.name}</span>`).join('')}
+                            <time>${formatDate(post.date)}</time>
+                        </div>
+                        <h1>${post.title}</h1>
+                    </header>
+                    <div class="blog-post-body">${renderMarkdown(post.body)}</div>
+                    <footer class="blog-post-footer">
+                        <a href="${post.url}" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                            <i class="fab fa-github"></i> Diskusi di GitHub (${post.comments})
+                        </a>
+                    </footer>
+                </article>
+            `;
+        } catch (e) {
+            el.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> Gagal memuat post. <button onclick="location.reload()">Coba lagi</button></div>`;
+            console.error(e);
+        }
+    })();
+    </script>
+</body>
+</html>

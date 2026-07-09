@@ -13,12 +13,11 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">Syntetika</a>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#instagram">Feed</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="log.html">Release Log</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#log">Release Log</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -35,8 +34,8 @@
             <p class="hero-tagline"><span id="typed-text"></span><span class="cursor">|</span></p>
             <p class="hero-desc">Syntetika Project — exploring the intersection of visual, sound, technology, and space through experimental tools and multimedia experiences.</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="#log" class="btn btn-outline">Release Log</a>
+                <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+                <a href="blog/" class="btn btn-outline">Read Blog</a>
             </div>
             <div class="hero-socials">
                 <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
@@ -62,81 +61,6 @@
                 </div>
                 <div class="about-image">
                     <img src="images/performance.jpg" alt="Syntetika Performance">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Experimental tools currently in development</p>
-
-            <div class="project-featured" id="project-studio">
-                <div class="project-featured-content">
-                    <span class="project-badge">CORE</span>
-                    <h3>Syntetika Studio</h3>
-                    <p class="project-desc">
-                        <strong>Open Experience Composition Platform</strong> — compose sound, shape space,
-                        create experience. Fork of Bespoke Synth. Node-based architecture unifying audio, MIDI,
-                        Python scripting, and real-time performance in one modular environment.
-                    </p>
-                    <div class="project-tags">
-                        <span>C++</span><span>JUCE</span><span>Python</span><span>VST2</span><span>Ableton Link</span><span>GPL-3.0</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/danartriyudistira/Syntetika-Studio/releases" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-download"></i> Download (v1.1.1)</a>
-                        <a href="https://github.com/danartriyudistira/Syntetika-Studio" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> Source</a>
-                        <a href="#log" class="btn btn-outline"><i class="fas fa-clipboard-list"></i> Release Log</a>
-                    </div>
-                </div>
-                <div class="project-featured-visual">
-                    <div class="visual-placeholder">
-                        <i class="fas fa-wave-square"></i>
-                        <span>Syntetika Studio</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card" id="project-engine">
-                    <div class="project-img">
-                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-badge small">ENGINE</span>
-                        <h3>Syntetika Engine</h3>
-                        <p>Browser-based DAW with AI-assisted composition, WebGL visualizer, and hardware MIDI support. 4-track sequencer, 35+ genre drums, 100+ scales — no framework, no build step.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span><span>WebAudio</span><span>WebGL2</span><span>Web MIDI</span><span>AI</span><span>OSC</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/danartriyudistira/syntetika_engine/releases" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> v1.1.0</a>
-                            <a href="https://github.com/danartriyudistira/syntetika_engine" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Source</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" id="project-mapping">
-                    <div class="project-img">
-                        <div class="project-img-placeholder" style="background: linear-gradient(135deg, #1a1a2e, #0f3460, #16213e);">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <span class="project-badge small">PLUGIN</span>
-                        <h3>HLTN Advanced Output</h3>
-                        <p>OBS Studio plugin for multi-display output with interactive warp mesh, edge blending, and auto-layout grid. Real-time projection mapping directly from OBS.</p>
-                        <div class="project-tags">
-                            <span>C++</span><span>OBS Plugin</span><span>Warp Mesh</span><span>Edge Blend</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/danartriyudistira/Hltn-advance-mapping" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fab fa-github"></i> Source</a>
-                            <a href="https://github.com/danartriyudistira/Hltn-advance-mapping#readme" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-book"></i> Docs</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -232,92 +156,6 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
-            </div>
-        </div>
-    </section>
-
-    <section id="log" class="log">
-        <div class="container">
-            <h2 class="section-title">Release Log</h2>
-            <p class="section-subtitle">Updates, fixes, problem solving & development notes</p>
-
-            <div class="log-list">
-                <article class="log-entry">
-                    <div class="log-meta">
-                        <span class="log-version">v1.1.1</span>
-                        <span class="log-project">Syntetika Studio</span>
-                        <time class="log-date">09 JUL 2026</time>
-                    </div>
-                    <div class="log-body">
-                        <h3>HRTF Overload Hotfix & Project Cleanup</h3>
-                        <div class="log-section">
-                            <h4>Problems Fixed</h4>
-                            <ul>
-                                <li>Threading safety issue di <code>SpatialRender</code> — race condition saat multiple nodes mengakses HRTF processor secara bersamaan</li>
-                                <li>Memory leak di <code>Push2Control</code> — object tidak di-release saat disconnect</li>
-                                <li>Buffer overflow di <code>SpatialRender</code> dan <code>GIFAnimator</code> — out-of-bounds write saat buffer size berubah runtime</li>
-                            </ul>
-                        </div>
-                        <div class="log-section">
-                            <h4>Changes</h4>
-                            <ul>
-                                <li>Refactor sistem spatial audio — menghapus legacy HRTF path yang tidak terpakai</li>
-                                <li>Perbaikan sistem save/load — state preservation antar sesi</li>
-                                <li>UI improvements dan cleanup orphan files</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="log-entry">
-                    <div class="log-meta">
-                        <span class="log-version">v1.1.0</span>
-                        <span class="log-project">Syntetika Engine</span>
-                        <time class="log-date">15 JUN 2026</time>
-                    </div>
-                    <div class="log-body">
-                        <h3>Audio Lag Fix & Performance Optimization</h3>
-                        <div class="log-section">
-                            <h4>Problems Fixed</h4>
-                            <ul>
-                                <li>Audio lag saat playback lebih dari 2 menit — buffer scheduling tidak sinkron dengan <code>AudioContext.currentTime</code></li>
-                                <li>MIDI latency tidak konsisten — timing issue di Web MIDI API handler</li>
-                            </ul>
-                        </div>
-                        <div class="log-section">
-                            <h4>Changes</h4>
-                            <ul>
-                                <li>Optimasi Web Audio API rendering pipeline — mengurangi callback overhead</li>
-                                <li>Enhanced AI composition engine — rule-based pattern generation lebih responsif</li>
-                                <li>Stabil untuk live performance dengan hardware MIDI controllers</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="log-entry">
-                    <div class="log-meta">
-                        <span class="log-version">init</span>
-                        <span class="log-project">HLTN Advanced Output</span>
-                        <time class="log-date">01 JUN 2026</time>
-                    </div>
-                    <div class="log-body">
-                        <h3>Initial Development — Core Systems</h3>
-                        <div class="log-section">
-                            <h4>Implemented</h4>
-                            <ul>
-                                <li>Multi-display output system — multiple output display dalam satu project</li>
-                                <li>Warp mesh dengan interactive vertex editing untuk perspective mapping</li>
-                                <li>Edge blending — seamless multi-projector setup</li>
-                                <li>Auto-layout grid system untuk slice management</li>
-                            </ul>
-                        </div>
-                        <div class="log-section">
-                            <h4>Stack</h4>
-                            <p>C++ / CMake / OBS Plugin SDK — target Windows</p>
-                        </div>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
