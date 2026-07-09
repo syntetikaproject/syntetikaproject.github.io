@@ -4,6 +4,13 @@
     min-height: 50vh;
 }
 
+.blog-actions {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .blog-grid {
     max-width: 700px;
     margin: 0 auto;

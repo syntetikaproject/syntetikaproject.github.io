@@ -33,6 +33,9 @@
 
     <section class="blog-list-section">
         <div class="container">
+            <div class="blog-actions">
+                <button class="btn btn-outline btn-sm" onclick="clearCache();loadPosts();"><i class="fas fa-sync-alt"></i> Refresh</button>
+            </div>
             <div class="blog-grid" id="blog-grid">
                 <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading posts...</div>
             </div>
@@ -64,12 +67,18 @@
     <script src="../js/blog.js"></script>
     <script src="../js/script.js"></script>
     <script>
-    (async () => {
-        const grid = document.getElementById('blog-grid');
+    const grid = document.getElementById('blog-grid');
+
+    function clearCache() {
+        localStorage.removeItem('syntetika_blog_cache');
+    }
+
+    async function loadPosts() {
+        grid.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading posts...</div>';
         try {
             const posts = await fetchPosts();
             if (posts.length === 0) {
-                grid.innerHTML = '<div class="empty">Belum ada post. Posting pertama akan muncul di sini.</div>';
+                grid.innerHTML = '<div class="empty">Belum ada post. Buat issue baru di <a href="https://github.com/syntetikaproject/syntetikaproject.github.io/issues" target="_blank" rel="noopener">GitHub</a> dengan label <code>blog</code>.</div>';
                 return;
             }
             grid.innerHTML = posts.map(p => `
@@ -84,10 +93,12 @@
                 </article>
             `).join('');
         } catch (e) {
-            grid.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> Gagal memuat post. <button onclick="location.reload()">Coba lagi</button></div>`;
+            grid.innerHTML = `<div class="error"><i class="fas fa-exclamation-triangle"></i> Gagal memuat post. <button onclick="clearCache();loadPosts();">Coba lagi</button></div>`;
             console.error(e);
         }
-    })();
+    }
+
+    loadPosts();
     </script>
 </body>
 </html>
