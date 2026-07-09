@@ -560,7 +560,7 @@ section { padding: 100px 0; }
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: var(--border-light);
+    color: var(--text-secondary);
     transition: all var(--transition);
 }
 
