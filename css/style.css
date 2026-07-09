@@ -579,6 +579,19 @@ section { padding: 100px 0; }
 
 .ig-item:hover .ig-overlay { opacity: 1; }
 .ig-item:hover .ig-placeholder { transform: scale(1.05); }
+.ig-item:hover img { transform: scale(1.05); }
+
+.ig-item--loaded img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition);
+}
+
+.ig-item--fallback {
+    display: none;
+}
 
 /* ===== Contact ===== */
 .contact { background: var(--bg-secondary); }
