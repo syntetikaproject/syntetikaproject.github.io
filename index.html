@@ -16,9 +16,9 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#diary">Diary</a></li>
                 <li><a href="#instagram">Feed</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#log">Release Log</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -36,7 +36,7 @@
             <p class="hero-desc">Syntetika Project — exploring the intersection of visual, sound, technology, and space through experimental tools and multimedia experiences.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="#diary" class="btn btn-outline">Read the Diary</a>
+                <a href="#log" class="btn btn-outline">Release Log</a>
             </div>
             <div class="hero-socials">
                 <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
@@ -51,14 +51,6 @@
             <h2 class="section-title">About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro"><strong>Multimedia Artist & Creative Technologist</strong> — Syntetika Project</p>
-                    <p>
-                        Perjalanan saya berangkat dari ketertarikan pada audiovisual melalui animasi, VJ performance,
-                        dan video mapping. Seiring waktu, praktik saya berkembang dari penciptaan visual menuju
-                        eksplorasi hubungan antara visual, suara, teknologi, dan ruang. Saya tertarik pada bagaimana
-                        media tidak hanya menyampaikan informasi, tetapi juga mampu membentuk pengalaman, membangun
-                        atmosfer, dan menciptakan interaksi baru antara manusia dengan lingkungannya.
-                    </p>
                     <p>
                         Melalui <strong>Syntetika Project</strong>, saya mengeksplorasi teknologi sebagai medium
                         kreatif dengan menggabungkan visual interaktif, synthesizer, real-time media, spatial
@@ -67,9 +59,9 @@
                         audiovisual performance, video mapping, projection art, interactive installation, generative
                         visual system, dan creative technology development.
                     </p>
-                    <blockquote class="about-quote">
-                        <em>Bagi saya, teknologi bukanlah tujuan akhir, melainkan instrumen untuk memahami bagaimana manusia merasakan, bergerak, dan terhubung melalui sebuah pengalaman bersama. Melalui setiap eksperimen dan kolaborasi, saya terus mengembangkan pendekatan yang berada di persimpangan seni, teknologi, dan ruang, dengan tujuan menciptakan pengalaman multimedia yang adaptif, imersif, dan bermakna.</em>
-                    </blockquote>
+                </div>
+                <div class="about-image">
+                    <img src="images/performance.jpg" alt="Syntetika Performance">
                 </div>
             </div>
         </div>
@@ -95,7 +87,7 @@
                     <div class="project-actions">
                         <a href="https://github.com/danartriyudistira/Syntetika-Studio/releases" target="_blank" rel="noopener" class="btn btn-primary"><i class="fas fa-download"></i> Download (v1.1.1)</a>
                         <a href="https://github.com/danartriyudistira/Syntetika-Studio" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> Source</a>
-                        <a href="#diary" class="btn btn-outline"><i class="fas fa-book"></i> Docs</a>
+                        <a href="#log" class="btn btn-outline"><i class="fas fa-clipboard-list"></i> Release Log</a>
                     </div>
                 </div>
                 <div class="project-featured-visual">
@@ -143,94 +135,6 @@
                         <div class="project-actions">
                             <a href="https://github.com/danartriyudistira/Hltn-advance-mapping" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fab fa-github"></i> Source</a>
                             <a href="https://github.com/danartriyudistira/Hltn-advance-mapping#readme" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-book"></i> Docs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="diary" class="diary">
-        <div class="container">
-            <h2 class="section-title">Project Diary</h2>
-            <p class="section-subtitle">Documenting experiments, breakthroughs & implementation notes</p>
-
-            <div class="diary-timeline">
-                <div class="diary-entry">
-                    <div class="diary-date">
-                        <span class="date-day">09</span>
-                        <span class="date-month">JUL</span>
-                        <span class="date-year">2026</span>
-                    </div>
-                    <div class="diary-body">
-                        <h3>Website & Documentation Hub Launched</h3>
-                        <p>
-                            Launched syntetika.github.io as the central hub for all Syntetika Studio projects.
-                            Built with pure HTML/CSS/JS, hosted on GitHub Pages. This site now serves as both
-                            a project diary and a distribution hub for experimental tools.
-                        </p>
-                        <div class="diary-tags">
-                            <span>#meta</span><span>#documentation</span><span>#web</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="diary-entry">
-                    <div class="diary-date">
-                        <span class="date-day">03</span>
-                        <span class="date-month">JUL</span>
-                        <span class="date-year">2026</span>
-                    </div>
-                    <div class="diary-body">
-                        <h3>Syntetika Studio v1.1.1 — HRTF Overload Hotfix & Project Cleanup</h3>
-                        <p>
-                            Released v1.1.1 with critical fixes: threading safety in SpatialRender,
-                            refactor of spatial audio system (legacy removal), save/load improvements,
-                            UI fixes, and cleanup of orphan files. Memory leak and buffer overflow fixes
-                            across multiple modules (Push2Control, SpatialRender, GIFAnimator).
-                        </p>
-                        <div class="diary-tags">
-                            <span>#syntetika-studio</span><span>#release</span><span>#bugfix</span><span>#spatial-audio</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="diary-entry">
-                    <div class="diary-date">
-                        <span class="date-day">15</span>
-                        <span class="date-month">JUN</span>
-                        <span class="date-year">2026</span>
-                    </div>
-                    <div class="diary-body">
-                        <h3>Syntetika Engine v1.1.0 — Audio Lag Fix & Performance Optimization</h3>
-                        <p>
-                            Major update for the browser-based DAW: resolved audio lag issues,
-                            optimized Web Audio API rendering pipeline, improved MIDI latency,
-                            and enhanced AI composition engine. Now running smoothly for live
-                            performance with hardware MIDI controllers.
-                        </p>
-                        <div class="diary-tags">
-                            <span>#syntetika-engine</span><span>#release</span><span>#webaudio</span><span>#midi</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="diary-entry">
-                    <div class="diary-date">
-                        <span class="date-day">01</span>
-                        <span class="date-month">JUN</span>
-                        <span class="date-year">2026</span>
-                    </div>
-                    <div class="diary-body">
-                        <h3>HLTN Advanced Output — Initial OBS Plugin Development</h3>
-                        <p>
-                            Started development on the OBS Studio plugin for multi-display projection mapping.
-                            Implemented core features: warp mesh with interactive vertex editing,
-                            edge blending for seamless multi-projector setups, and auto-layout grid
-                            system. Built with C++ and CMake for Windows.
-                        </p>
-                        <div class="diary-tags">
-                            <span>#hltn-mapping</span><span>#obs-plugin</span><span>#projection-mapping</span><span>#c++</span>
                         </div>
                     </div>
                 </div>
@@ -332,11 +236,100 @@
         </div>
     </section>
 
+    <section id="log" class="log">
+        <div class="container">
+            <h2 class="section-title">Release Log</h2>
+            <p class="section-subtitle">Updates, fixes, problem solving & development notes</p>
+
+            <div class="log-list">
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">v1.1.1</span>
+                        <span class="log-project">Syntetika Studio</span>
+                        <time class="log-date">09 JUL 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>HRTF Overload Hotfix & Project Cleanup</h3>
+                        <div class="log-section">
+                            <h4>Problems Fixed</h4>
+                            <ul>
+                                <li>Threading safety issue di <code>SpatialRender</code> — race condition saat multiple nodes mengakses HRTF processor secara bersamaan</li>
+                                <li>Memory leak di <code>Push2Control</code> — object tidak di-release saat disconnect</li>
+                                <li>Buffer overflow di <code>SpatialRender</code> dan <code>GIFAnimator</code> — out-of-bounds write saat buffer size berubah runtime</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Changes</h4>
+                            <ul>
+                                <li>Refactor sistem spatial audio — menghapus legacy HRTF path yang tidak terpakai</li>
+                                <li>Perbaikan sistem save/load — state preservation antar sesi</li>
+                                <li>UI improvements dan cleanup orphan files</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">v1.1.0</span>
+                        <span class="log-project">Syntetika Engine</span>
+                        <time class="log-date">15 JUN 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>Audio Lag Fix & Performance Optimization</h3>
+                        <div class="log-section">
+                            <h4>Problems Fixed</h4>
+                            <ul>
+                                <li>Audio lag saat playback lebih dari 2 menit — buffer scheduling tidak sinkron dengan <code>AudioContext.currentTime</code></li>
+                                <li>MIDI latency tidak konsisten — timing issue di Web MIDI API handler</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Changes</h4>
+                            <ul>
+                                <li>Optimasi Web Audio API rendering pipeline — mengurangi callback overhead</li>
+                                <li>Enhanced AI composition engine — rule-based pattern generation lebih responsif</li>
+                                <li>Stabil untuk live performance dengan hardware MIDI controllers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="log-entry">
+                    <div class="log-meta">
+                        <span class="log-version">init</span>
+                        <span class="log-project">HLTN Advanced Output</span>
+                        <time class="log-date">01 JUN 2026</time>
+                    </div>
+                    <div class="log-body">
+                        <h3>Initial Development — Core Systems</h3>
+                        <div class="log-section">
+                            <h4>Implemented</h4>
+                            <ul>
+                                <li>Multi-display output system — multiple output display dalam satu project</li>
+                                <li>Warp mesh dengan interactive vertex editing untuk perspective mapping</li>
+                                <li>Edge blending — seamless multi-projector setup</li>
+                                <li>Auto-layout grid system untuk slice management</li>
+                            </ul>
+                        </div>
+                        <div class="log-section">
+                            <h4>Stack</h4>
+                            <p>C++ / CMake / OBS Plugin SDK — target Windows</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-brand">
                 <span class="footer-logo">Syntetika</span>
                 <p>Project by Danartri — Experimental tools & multimedia experiences.</p>
+                <a href="Lampiran/Danar%20Syntetika%20Profile.pdf" target="_blank" rel="noopener" class="footer-cv">
+                    <i class="fas fa-file-pdf"></i> Download Profile (PDF)
+                </a>
             </div>
             <div class="footer-socials">
                 <a href="https://github.com/danartriyudistira" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>

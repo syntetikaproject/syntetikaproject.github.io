@@ -285,8 +285,12 @@ section { padding: 100px 0; }
 .about { background: var(--bg-secondary); }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 48px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
 }
 
 .about-text p {
@@ -297,6 +301,22 @@ section { padding: 100px 0; }
 }
 
 .about-text strong { color: var(--text-primary); }
+
+.about-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0.85) contrast(1.1);
+    transition: filter var(--transition);
+}
+
+.about-image:hover img { filter: brightness(1) contrast(1); }
 
 .about-intro {
     text-align: center;
@@ -468,89 +488,110 @@ section { padding: 100px 0; }
 .project-info .project-tags { margin-bottom: 18px; }
 .project-info .project-actions { gap: 8px; }
 
-/* ===== Diary ===== */
-.diary { background: var(--bg-secondary); }
+/* ===== Release Log ===== */
+.log { background: var(--bg-secondary); }
 
-.diary-timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    padding-left: 40px;
-}
+.log-list { max-width: 800px; margin: 0 auto; }
 
-.diary-timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 8px;
-    bottom: 8px;
-    width: 1px;
-    background: var(--border);
-}
-
-.diary-entry {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 36px;
-}
-
-.diary-entry::before {
-    content: '';
-    position: absolute;
-    left: -29px;
-    top: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent-glow);
-}
-
-.diary-date {
-    display: flex;
-    gap: 8px;
-    align-items: baseline;
-    margin-bottom: 12px;
-    font-family: var(--font-mono);
-}
-
-.date-day { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
-.date-month { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; }
-.date-year { font-size: 0.85rem; color: var(--text-secondary); }
-
-.diary-body {
+.log-entry {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 24px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 24px;
     transition: border-color var(--transition);
 }
 
-.diary-body:hover { border-color: var(--border-light); }
+.log-entry:hover { border-color: var(--accent); }
 
-.diary-body h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+.log-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
 }
 
-.diary-body p {
+.log-version {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(0, 229, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.log-project {
+    font-size: 0.88rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.log-date {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-left: auto;
+}
+
+.log-body { padding: 24px; }
+
+.log-body h3 {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+}
+
+.log-section { margin-bottom: 18px; }
+
+.log-section:last-child { margin-bottom: 0; }
+
+.log-section h4 {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.log-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.log-section ul li {
+    position: relative;
+    padding-left: 18px;
     color: var(--text-secondary);
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    margin-bottom: 6px;
 }
 
-.diary-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 14px;
-}
-
-.diary-tags span {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
+.log-section ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
     color: var(--accent);
-    opacity: 0.7;
+    opacity: 0.5;
+}
+
+.log-section ul li code {
+    background: rgba(0, 229, 255, 0.08);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-family: var(--font-mono);
+}
+
+.log-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
 }
 
 /* ===== Instagram ===== */
@@ -709,6 +750,25 @@ section { padding: 100px 0; }
     margin-top: 6px;
 }
 
+.footer-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition);
+}
+
+.footer-cv:hover {
+    border-color: var(--accent);
+    background: rgba(0, 229, 255, 0.05);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
 .footer-socials {
     display: flex;
     justify-content: center;
@@ -788,6 +848,8 @@ section { padding: 100px 0; }
     .nav-menu a { display: block; padding: 14px 0; font-size: 1.05rem; }
     .nav-toggle { display: block; }
 
+    .about-content { grid-template-columns: 1fr; gap: 24px; }
+
     .hero-name { font-size: 2.4rem; -webkit-text-stroke: 0; }
     .hero-tagline { font-size: 1rem; }
 
@@ -795,9 +857,8 @@ section { padding: 100px 0; }
 
     .instagram-grid { grid-template-columns: repeat(2, 1fr); }
 
-    .diary-timeline { padding-left: 24px; }
-    .diary-entry { padding-left: 24px; }
-    .diary-entry::before { left: -21px; }
+    .log-meta { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .log-date { margin-left: 0; }
 
     .project-featured-content { padding: 28px; }
 }
