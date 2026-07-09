@@ -1,10 +1,6 @@
 const INSTAGRAM_POSTS = [
-  'https://www.instagram.com/p/XXXXXXXXXXX/',
-  'https://www.instagram.com/p/YYYYYYYYYYY/',
-  'https://www.instagram.com/p/ZZZZZZZZZZZ/',
-  'https://www.instagram.com/p/AAAAAAAAAAA/',
-  'https://www.instagram.com/p/BBBBBBBBBBB/',
-  'https://www.instagram.com/p/CCCCCCCCCCC/',
+  'https://www.instagram.com/p/DaD0efJhbX7/',
+  'https://www.instagram.com/p/DZy-VG6Aaen/',
 ];
 
 async function fetchInstagramFeed() {
