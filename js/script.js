@@ -100,7 +100,7 @@ function initScrollReveal() {
     }, observerOptions);
 
     const elements = document.querySelectorAll(
-        '.project-card, .log-entry, .contact-item'
+        '.project-card, .contact-item'
     );
     elements.forEach(el => {
         el.style.opacity = '0';
