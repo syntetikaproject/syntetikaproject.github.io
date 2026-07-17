@@ -1,4 +1,4 @@
-# syntetika.github.io
+# syntetikaproject.github.io
 
 Personal portfolio website of Danar Triyudistira.
 
